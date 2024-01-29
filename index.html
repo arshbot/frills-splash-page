@@ -28,57 +28,106 @@
 			top: 20%;
 			margin: -100px 0 0 -150px;
                 }
+                .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                }
+
+                .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 200px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                
+                /* Position the tooltip */
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -60px;
+                font-family: Verdana,sans-serif;
+                font-size: 14px;
+                }
+
+                .tooltip:hover .tooltiptext {
+                visibility: visible;
+                }
+</style>
         </style>
 </head>
 <body>
         <h1>arshbot</h1>
         <pre>
-                                 +---------+                                
-                                 | <a href="https://arshbot.dev/">arshbot</a> |                                
-                                 +---------+                                
-                                   | | | |                                  
-                                   | | | |                                  
-                                   | | | |                                  
-                                   | | | |                                  
-                                   | | | \                                  
-                                   | | |  |                                 
-                                   | | |  |                                 
-                                   | | |  |                                 
-                                  /  / |  |                                 
-                                /-  |  |  -                                 
-                              /-    |  \   \                                
-                            /-      |   |   \+------------------+           
-                           -        |   |    | General Electric |           
-             +----------------+     |   |    +------------------+           
-             | pantherhackers |     |   |\               \--                
-             +----------------+     |   | -\                \-              
-              /--                   |   |   -\                \--           
-          /----\                    |   |     -\                 \--+------+
-        --      -\                  |   |       -\                  | DTIP |
-+----------+      --                /   |         ---------+        +------+
-| hackgsu  |      +------------+   |    |         | <a href="https://bitpay.com">bitpay</a> |                
-+----------+      | pantherbot |   |    |         +--------+                
-                  +------------+   |    -\               -\                 
-                                   /    | --               ---\             
-                                  |     |   +--------+      +------+        
-                                  |     /   | <a href="https://thesis.co">thesis</a> |      | <a href="https://arshbot.dev/projects/hail.html">hail</a> |        
-                                  /    |    +--------+      +------+        
-                  +----------+  /-     |         \    -\                    
-                  | <a href="http://bitcraft.io/">bitcraft</a> | -       |          -     --\                 
-                  +----------+         /       +------+    -\               
-                                      |        | <a href="https://foldapp.com">fold</a> |      ---------------+
-                                      |        +------+      | <a href="https://github.com/summa-tx/riemann-keys">riemann-keys</a> |
-                                      |            \         +--------------+
-                                      |             \                       
-                                      /              \                      
-                                     |             +-----+                  
-                                     |             | <a href="https://arshbot.dev/projects/lnt.html">lnt</a> |                  
-                                     /             +-----+                  
-                                    |                                       
-                                    |                                       
-                           +----------------+                               
-                           | MultiMedia LLC |                               
-                           +----------------+  
+                                     +-------------+
+                                     |   <div class="tooltip">arshbot<span class="tooltiptext"> My moniker</span></div>   |
+                                     +-------------+
+                                      |  |  |  |  |
+                                      |  |  |  |  |
+                                      |  |  |  |  |
+                                      |  |  |  |  |
+                                      |  |  |  |   \
+                                      |  |  |  |    \
+                                      |  |  |  |    \
+                                      |  |  |  |     \+------------------+
+                                      /  |  |  |\     | General Electric |
+                                     /   |  |  | \    +------------------+
+                                  /-/    |  |  |  \     \             \
+               +----------------+/       |  |  |  |      \\            \
+               | PantherHackers |        |  |  |  |        \            \----\
+               +----------------+        |  |  |  |         +--------+        \
+                /        /               |  |  |  |         | GTA VR |      +-----------+
++------------+ /        /               /|  |  |  |         +--------+      | Drone Nav |
+| PantherBot |/        /               / |  |  |  |                         +-----------+
++------------+    +---------+         /  |  |  |  |
+                  | HackGSU |         |  |  |  |  |
+                  +---------+         |  |  |  |  |
+                                      |  |  |  |  |
+                                      |  |  |  |   \
+                                      |  |  |  |    \------\
+                                      |  |  |  |            \
+                                     /   |  |  |             \
+                   +----------+ /---/    |  |  |         +--------+
+                   | BitCraft |/         |  |  |         | thesis | -------\
+                   +----------+          |  |  |         +--------+         \
+                            /            |  |  |              \          +--------------+
+                           /             |  |  |               \         | riemann-keys |
+             +------+ /---/              |  |  |               \         +--------------+
+             | hail |/                   |  |  |                \           \
+             +------+                   /   |   \               +------+     \
+                                       /    |    \              | fold |      \--\
+                       /--------------/     |     \             +------+          \
+                      /              /      |      \----\                          \
+             /-------/              /      /|            \                       +-----+
+            /                      /      / |             \                      | lnt |
+     +------------+               /      /  |              \                     +-----+
+     | multimedia |              /       |  |\        +---------+
+     +------------+     /-------/        |  | \       | voltage |
+                       /                 |  |  \      +---------+
+                      /                  |  |   |
+                     /                   |  |   |
+                    /                    |  |    \
+      +----------------+                 |  |     \-----------\
+      | lightning labs |                 |  |\                 \+------+
+      +----------------+                 |  | \                 | Swan |
+                                         |  |  \                +------+
+                                         |  |  |
+                                         |  |  |
+                                   +-----+  |  |
+                                   |  ?  |  |  |
+                                   +-----+  |  |
+                                            |  +---------+
+                                            |  |    ?    |
+                                            |  +---------+
+                                            |
+                                       +---------+
+                                       |    ?    |
+                                       +---------+
         </pre>
 
 	<p style="position:absolute;bottom:0;left: 3;"><a href="https://arshbot.dev" style="color: #000000">no frills</p>
